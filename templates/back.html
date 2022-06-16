@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<!-- BODY !!!!!!! -->
+
+  
+<body>
+  
+<div class="bgimg">
+  <div class="middle w3-padding-16" style="top:10%">
+    <h1>Digital Hall Pass</h1>
+    <hr class="rounded">
+    <h3>You are returning to: {{ session['origin'] }}<br>
+    If you are leaving, scan the other QR code.</h3>
+    
+  </div>
+  <div>
+    {% if message  %}
+    <div class="middle w3-container w3-panel w3-pale-red w3-border" style="width:25%;text-align:left">
+        <h3>Error</h3>
+        <p style='padding-bottom:16px'>{{ message }}</p>
+    </div>
+    {% endif %}
+  </div>
+  <form method="post">
+      <div class="middle">       
+        <label for="id"><h3>Enter MCPS Student ID</h3></label>
+        <p>
+        <input type="tel" name="id" style="width:30%" required>
+        </p>
+      </div>
+      <div class="middle w3-padding-16" style="width:20%">
+        <button class="w3-button w3-pink" type="submit"><h3 style="text-align:middle;margin:auto">Next</h3></button>
+      </div>
+  
+    </form>
+</div>
+</body>
+</html>
+

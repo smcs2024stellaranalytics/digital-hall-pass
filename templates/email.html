@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<!-- BODY !!!!!!! -->
+
+  
+<body>
+  
+<div class="bgimg">
+  <div class="middle w3-padding-16" style="top:10%">
+    <h1>Email a pass</h1>
+    <hr class="rounded">
+  </div>
+  <div class="middle" style="top:50%"><h4>
+    <a href="mailto:{{ session['studentEmail'] }}?subject=You have been sent a Digital Hall Pass&body={{ session['firstName'] }} {{ session['lastName'] }} has sent you a digital hall pass for the following reason: {{ session['studentReason'] }}. Click the link to view the pass. {{ session['studentPass'] }}" class="w3-button w3-pink">
+      Click to send pass
+    </a>
+        <a href="{{ url_for('login') }}" class="w3-button w3-pink">
+      Home
+    </a>
+  </h4>
+  </div>
+</div>
+</body>
+</html>
+

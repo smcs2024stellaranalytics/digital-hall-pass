@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<!-- BODY !!!!!!! -->
+
+  
+<body>
+  
+<div class="bgimg">
+  <div class="middle w3-padding-16" style="top:10%">
+    {% if session['adminPerms'] == 1 %}
+    <h1>Teacher Interface (Admin)</h1>
+    {% endif %}
+    {% if session['adminPerms'] == 0 %}
+    <h1>Teacher Interface</h1>
+    {% endif %}
+    <hr class="rounded">
+  </div>
+  <div class="middle" style="top:50%"><h4>  
+    {% if session['adminPerms'] == 1 %}
+    <a href="{{ url_for('addteacher') }}" class="w3-button w3-pink">
+      Add a teacher
+    </a>
+    {% endif %}
+    <a href="{{ url_for('qr') }}" class="w3-button w3-pink">
+      Generate QR code
+    </a>
+    </a>
+    <a href="{{ url_for('sendapass') }}" class="w3-button w3-pink">
+      Send a pass
+    </a>
+    <a href="{{ url_for('logout') }}" class="w3-button w3-pink">
+      Logout
+    </a>
+  </h4>
+  </div>
+</div>
+</body>
+</html>
+

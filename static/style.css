@@ -1,0 +1,108 @@
+h1 {
+  font-size: 3.5vw;
+}
+
+h2 {
+  font-size: 2.5vw;
+}
+
+h3 {
+  font-size: 2vw;
+}
+h4 {
+  font-size: 1.75vw;
+}
+h5 {
+  font-size: 1.5vw;
+}
+
+table, th, td {
+  font-size: 1.6vw;
+  width: 50%;
+  height: 70%;
+  border:0px solid black
+}
+
+body, html, p {
+  height: 100%;
+  min-height:100%;
+  margin: 0;
+  font-family: "Helvetica", Helvetica, sans-serif;
+  font-size: 15px;
+  font-size: 1.5vw;
+  
+}
+
+.bgimg {
+  background-image: url('background.png');
+  background-color: #ffd4bb;
+  background-size: 100vw 100vh;
+  background-position: center;
+  position: relative;  
+  color: black;
+  font-family: "Helvetica", Helvetica, sans-serif;
+  font-size: 25px;
+  font-size: 1vw;
+  text-align:left;
+  min-height:100%
+}
+
+.center{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
+
+.topmiddle {
+  position:absolute;
+  right:50%;
+  top:0;
+/*   transform:translate(-50%,0%);
+  -ms-transform:translate(-50%,0%) */
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+}
+
+.middle {
+  margin: auto;
+  text-align: center;
+}
+.bottommiddle {
+  top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+}
+
+hr.rounded {
+  margin: auto;
+  width: 20%;
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
+}
+
+.pass-info div {
+  display: flex;
+}
+
+.pass-info div span {
+  flex: 1;
+}
+
+.pass-info div span:first-of-type {
+  text-align: right;
+  padding-right: 5px;
+}
+
+.pass-info div span:last-of-type {
+  padding-left: 5px;
+}

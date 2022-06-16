@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<!-- BODY !!!!!!! -->
+
+  
+<body>
+  
+<div class="bgimg">
+  <div class="middle w3-padding-16" style="top:10%">
+    <h1>Add a Teacher</h1>
+    <hr class="rounded">
+    <h3>Enter the teacher's information</h3>
+    
+  </div>
+  <div>
+    
+  </div>
+  <form method="post">
+      <div class="middle">       
+        <label for="email"><h3>Email</h3></label>
+        <p>
+        <input type="text" name="email" style="width:30%" required>
+        </p>
+        <label for="fname"><h3>First Name</h3></label>
+        <p>
+        <input type="text" name="fname" style="width:30%" required>
+        </p>
+        <label for="lname"><h3>Last Name</h3></label>
+        <p>
+        <input type="text" name="lname" style="width:30%" required>
+        </p>
+        <label for="password"><h3>Password</h3></label>
+        <p>
+        <input type="text" name="password" style="width:30%" required>
+        </p>
+        <h3>
+        Admin Permissions?
+        <label>
+        <input type="radio" name="admin" value="1">
+        Yes
+      </label>
+      <label>
+        <input type="radio" name="admin" value="0">
+        No
+      </label>
+          </h3>
+
+
+
+        
+      </div>
+      <div class="middle w3-padding-16" style="width:20%">
+        <button class="w3-button w3-pink" type="submit"><h3 style="text-align:middle;margin:auto">Next</h3></button>
+      </div>
+  
+    </form>
+</div>
+</body>
+</html>
+

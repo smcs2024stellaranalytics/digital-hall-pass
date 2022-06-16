@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+  
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/static/style.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{{
+  url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
+
+<!-- BODY !!!!!!! -->
+
+  
+<body>
+  
+<div class="bgimg">
+  <div class="middle center w3-padding-16 passtable" style="top:10%" id="passtable">
+    <h1>Digital Pass</h1>
+    <table class="center w3-padding-16" id="pass" style="border: 1px solid black" >
+   <tr>
+     <td><img src="{{ data['photo'] }}" alt='Your Portrait' style="border:1px solid black"><br></br>{{ data['fName'] }} <br>MCPS ID: {{ data['id'] }}</td><td><div class="pass-info">
+     <div><span>Active</span>: <span>{{ data['active'] }}</span></div>
+     <div><span>Expires</span>: <span>{{ data['expires'] }}</span></div>
+     <div><span>Teacher</span>: <span>{{ data['teacher'] }}</span></div>
+     <div><span>From</span>: <span>{{ data['from'] }}</span></div>
+     <div><span>To</span>: <span>{{ data['to'] }}</span></div></td>
+   </tr>
+<tr><td><br></td><td></td></tr>
+   <tr>
+
+     <!-- do not touch it works-->
+ <script>
+     setInterval(function() {
+    $.ajax({
+      type: "GET",
+      url: "/countdown_timer?id={{ data['passID'] }}",
+    })  .done(function( data ) {
+        console.log(data);
+      $("#isActive").text(data.isActive)
+      $("#countdown").text(data.countdown)
+      $("#pass").css("background-color",data.color)
+       }).fail(function(jqXHR, textStatus, errorThrown) {
+         console.log(jqXHR, textStatus, errorThrown);
+       });
+      }, 1000); 
+  </script>
+     
+<td style="font-size:2.5vw" id="isActive">{{ isActive }}</td>
+<td style="font-size:2.5vw" id="countdown">Time Left: {{ countdown }}</td>
+     
+   </tr>
+    </table>
+</div>
+  
+  <div class="middle">
+    <p>This is your pass. Do not close this webpage or your pass may become invalid.</p>
+  </div>
+</div>
+</body>
+</html>
+

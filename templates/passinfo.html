@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<!-- BODY !!!!!!! -->
+
+  
+<body>
+  
+<div class="bgimg">
+  <div class="middle w3-padding-16" style="top:10%">
+    <h1>Welcome {{ session['firstName'] }}!</h1>
+    
+  </div>
+  <div class = "w3-padding-16">
+    <h2 class = "middle w3-padding-16">Destination</h2>
+    <hr class= "middle" style="width:15%;border-top:4px solid #555555; border-radius:8px">
+
+    <form method="post">
+    <table class = "middle w3-padding-16" style = "text-align:left;border:0px solid black;width:40%;padding-left:10vw">
+      
+      <tr>
+        <td>
+    <input type="radio" id="bathroom" name="rad" value="Bathroom"> <label for="bathroom"> Bathroom</label><br>
+        </td>
+      </tr>
+        <tr>
+        <td>
+    <input type="radio" id="counselor" name="rad" value="Counselor"><label for="counselor" > Counselor</label><br>
+        </td>
+        </tr>
+      <tr>
+        <td>
+    <input type="radio" id="mainoffice" name="rad" value="Main Office"><label for="mainoffice" > Main Office</label><br>
+          </td>
+      </tr>
+<script>
+function checkRadio(){
+  document.getElementById('other').checked = "true";  
+}
+</script>
+        <tr>
+        <td>
+  <input type="radio" name="rad" id="other" value=""></input> <input name="otherBox" type="text" onclick="checkRadio()" placeholder="Other"></input>
+      </td></tr>
+    </table>
+
+      <div class=middle>
+  <button class="middle w3-button w3-pink" type="submit"><h3 style="text- align:middle;margin:auto">Next</h3></button>
+  </div>
+    </form>
+  </div>
+  
+</div>
+</body>
+</html>
+

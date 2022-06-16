@@ -1,0 +1,4 @@
+This is where the data for your student's digital passes will be stored.
+Any new passes will be added to the next available spot.
+You are free to sort the data as you please.
+Pass ID,Student ID,Name,From,To,Teacher,Active Starting,Expires On,Minutes Late

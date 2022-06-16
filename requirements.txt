@@ -1,0 +1,13 @@
+passlib
+pymongo[srv]
+pycryptodome
+google-api-python-client==1.12.1
+google-auth-httplib2
+google-auth-oauthlib
+oauth2client
+pygsheets
+qrcode[pil]
+pillow
+flask
+gunicorn
+httplib2

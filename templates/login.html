@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<!-- BODY !!!!!!! -->
+
+  
+<body>
+  
+<div class="bgimg">
+  <div class="middle w3-padding-16" style="top:10%">
+    <h1>Teacher Login</h1>
+    <hr class="rounded">
+  </div>
+  <div>
+    {% if message  %}
+    <div class="middle w3-container w3-panel w3-pale-red w3-border" style="width:25%;text-align:left">
+        <h4><i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+Error</h4>
+        <h5 style='padding-bottom:0.5vw'>{{ message }}</h5>
+    </div>
+    {% endif %}
+  </div>
+    <form method="post">
+      <div class="middle">
+        <label for="username"><h3>Email</h3></label>
+        <p>
+        <input type="text" name="username" style="width:30%" required>
+        </p>
+        <label for="password"><h3>Password</h3></label>
+        <p>
+        <input type="password" name="password" style="width:30%" required>
+        </p>
+      </div>
+      <div class="middle w3-padding-16"   style="width:20%">
+        <button class="w3-button w3-pink" type="submit"><h3 style="text-align:middle;margin:auto">Login</h3></button>
+      </div>
+  
+    </form>
+</div>
+
+</body>
+</html>
+
